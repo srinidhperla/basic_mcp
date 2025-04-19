@@ -14,7 +14,7 @@ mcp = FastMCP("LeaveManager")
 @mcp.tool()
 def get_leave_balance(employee_id: str) -> str:
     """Check how many leave days are left for the employee"""
-    data=employee_leaves.get(employee_id)
+    data = employee_leaves.get(employee_id)
     if data:
         return f"{employee_id} has {data['balance']} leave days remaining."
     return "Employee ID not found."
